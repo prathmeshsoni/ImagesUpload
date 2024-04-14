@@ -1,2 +1,2 @@
 # ImagesUpload
-Django File Uploader simplifies server-to-server file transfers using Django REST Framework, enabling secure and efficient uploads of images, videos, and other file types.
+Django File Uploader is a web application powered by Django REST Framework, designed for easy and secure file uploads (images, videos, etc.) from one server to another. It simplifies the process, ensures data integrity, and offers efficient file management capabilities.
