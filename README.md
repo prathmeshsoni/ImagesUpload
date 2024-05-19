@@ -16,8 +16,9 @@ Introducing Django File Uploader, a robust web application built on Django REST 
 
 ## Setup
 1. Clone the repository: `git clone https://github.com/prathmeshsoni/ImagesUpload.git && cd ImagesUpload`
-2. Install dependencies: `pip install -r requirements.txt`
-3. Launch the Django development server: `python manage.py runserver`
+2. Create & Activate virtual environment: `python -m venv .venv && .venv\Scripts\activate.bat`
+3. Install dependencies: `pip install -r requirements.txt`
+4. Launch the Django development server: `python manage.py runserver`
 
 ## Empower Your File Upload Workflow
 Django File Uploader simplifies the file upload process, enabling users to seamlessly transfer files between servers while ensuring data security and reliability. Experience a user-friendly interface to manage your digital assets effectively.
