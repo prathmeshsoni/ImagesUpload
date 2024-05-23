@@ -29,7 +29,7 @@ Introducing Django File Uploader, a robust web application built on Django REST 
 ## Empower Your File Upload Workflow
 Django File Uploader simplifies the file upload process, enabling users to seamlessly transfer files between servers while ensuring data security and reliability. Experience a user-friendly interface to manage your digital assets effectively.
 
-Explore Django File Uploader now at [here](https://images.prathmeshsoni.works) 🌐📁
+Explore Django File Uploader now at <a href="https://images.prathmeshsoni.works?ref=here-button" target="_blank">here</a> 🌐📁
 
 ## All Set :)
 
