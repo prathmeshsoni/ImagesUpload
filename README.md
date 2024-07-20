@@ -26,6 +26,30 @@ Introducing Django File Uploader, a robust web application built on Django REST 
 3. Install dependencies: `pip install -r requirements.txt`
 4. Launch the Django development server: `python manage.py runserver`
 
+## API Usage
+### Upload File
+To upload a file, use the following cURL command:
+
+```sh
+curl -X POST https://images.prathmeshsoni.works/images/ \
+  -H "Authorization: token YOUR_API_TOKEN" \
+  -F "file=@/path/to/your/file.png"
+```
+
+**Response**:
+```json
+{
+  "id": 1,
+  "file": "https://images.prathmeshsoni.works/media/images/file.png"
+}
+```
+
+### Demo Token
+- **API Token**: `90ce30269636eef63fd28078149c3fa93790f5d5`
+
+Replace `YOUR_API_TOKEN` with the above token in the cURL command.
+
+
 ## Empower Your File Upload Workflow
 Django File Uploader simplifies the file upload process, enabling users to seamlessly transfer files between servers while ensuring data security and reliability. Experience a user-friendly interface to manage your digital assets effectively.
 
