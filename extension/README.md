@@ -38,7 +38,7 @@ Upload Wizard is a powerful Chrome extension that allows you to effortlessly sha
 
 ## Explore and Simplify Your File Sharing
 - **Upload Wizard**: Upload Wizard streamlines the process of sharing files by providing a quick, secure, and reliable method to generate shareable URLs for any file type. Whether you're sharing with colleagues, friends, or clients, Upload Wizard has you covered.
-- **Explore Now**: [here](https://images.prathmeshsoni.works/extension/?ref=here-button) 🌐📁
+- **Explore Now**: [here](https://mrsoni.me/Upload-Wizard-Extension?ref=here-button) 🌐📁
 
 
 <p align="left">
