@@ -1,0 +1,111 @@
+.uploaded__image.none {
+  display: none;
+}
+
+.uploaded__image,
+.uploaded__image .header .warning,
+.uploaded__image .header .success {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.uploaded__image .header h2 {
+  color: #FFF;
+  font-size: 18px;
+  margin-top: 12px;
+}
+
+.uploaded__image .header img {
+  width: 36px;
+  height: 36px;
+}
+
+.container__preview__image {
+
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 24px 0;
+}
+
+.container__preview__image img {
+  object-fit: contain;
+  max-width: 3368px;
+  max-height: 225px;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+}
+
+.copy__link__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 40px;
+  border-radius: 12px;
+  border: 1px solid #E0E0E0;
+  padding: 2px 6px;
+}
+
+.copy__link__image p {
+  width: 100%;
+  height: 13px;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 500;
+  color: #FFF;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.copy__link__image button {
+  width: 100px;
+  height: 30px;
+  background: #2F80ED;
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: capitalize;
+  border: none;
+  color: #FFF;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 16px;
+}
+
+.container__preview__image .warning {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container__preview__image .warning h3 {
+  color: #838383;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.container__preview__image .warning small {
+  color: #888686;
+  line-height: 24px;
+}
+
+#button__back {
+  padding: 8px 24px;
+  font-size: 12px;
+}
+
+.copy__link__image.hidden,
+.uploaded__image .back_upload.hidden,
+.container__preview__image img.hidden,
+.uploaded__image .header .success.hidden,
+.uploaded__image .header .warning.hidden,
+.container__preview__image .warning.hidden {
+  display: none;
+}

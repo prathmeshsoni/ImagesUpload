@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" style="text-align: -webkit-center" id="main-html">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link rel="shortcut icon" href="./assets/logo/icon48.png" />
+    <link rel="icon" href="./assets/logo/icon48.png" type="image/x-icon" />
+    
+    <title>Upload Wizard Extensions</title>
+    
+    <meta name="author" content="Prathmesh Soni" />
+    <meta name="description" content="Upload Wizard Extensions: Easily upload files and generate short URLs for quick access. Supports drag-and-drop uploads and text-to-file conversion." />
+    <meta property="og:title" content="Upload Wizard Extensions" />
+    <meta property="og:site_name" content="Upload Wizard" />
+    <meta property="og:url" content="https://images.prathmeshsoni.works/extensions/" />
+    <meta property="og:description" content="Enhance your Django File Uploader with drag-and-drop functionality and short URL generation for seamless file management." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://krishna.mrsoni.me/fileupload/assets/img/pretty-snap-25-09-2023.png" />
+    
+    <link rel="alternate" hreflang="en" href="https://images.prathmeshsoni.works" />
+    
+    <link rel="stylesheet" href="./assets/styles/components/ModalImageUploading.css" />
+    <link rel="stylesheet" href="./assets/styles/components/UploadedImage.css" />
+    <link rel="stylesheet" href="./assets/styles/components/DragAndDrop.css" />
+    <link rel="stylesheet" href="./assets/styles/components/ButtonHover.css" />
+    <link rel="stylesheet" href="./assets/styles/components/Footer.css" />
+    <link rel="stylesheet" href="./assets/styles/components/Button.css" />
+    <link rel="stylesheet" href="./assets/styles/style.css" />
+    <link rel="stylesheet" href="./assets/styles/text-style.css" />
+  </head>
+  
+  <body>
+    <main id="text-main">
+      <div class="container">
+        <div class="container__image__uploader" id="container__image__uploader">
+          <div class="formbold-textarea formbold-form-labe header__image__uploader">
+            <h3>Upload Your File</h3>
+          </div>
+          
+          <form id="form">
+            <div class="drop__image" id="dragAndDrop">
+              <div></div>
+              <div></div>
+              <div></div>
+              <div></div>
+              <img id="file" src="./assets/images/svg/photo.svg" />
+              <label>Drag & Drop your file here</label>
+            </div>
+            
+            <div class="uploader__by__button">
+              <div class="input hiddenLabel">
+                <label for="selectFile">Chosen a file</label>
+                <input type="file" id="selectFile" class="button__hover" />
+              </div>
+            </div>
+          </form>
+        </div>
+        
+        <div class="uploaded__image none" id="uploaded__image">
+          <div class="add__new visibility__hidden" id="add__new">+</div>
+          <div class="header">
+            <div class="success">
+              <img src="./assets/images/svg/check.svg" alt="Upload done" />
+              <h2 id="Sucess">Uploaded Successfully!</h2>
+            </div>
+            
+            <div class="warning hidden">
+              <img src="./assets/images/svg/warning.svg" alt="Error upload." />
+              <h2>Error Upload!</h2>
+            </div>
+          </div>
+          
+          <div class="container__preview__image">
+            <img src="#" alt="Your Image" id="addedImage" class="" />
+            <div class="warning hidden">
+              <h3>This file extension not allowed!</h3>
+              <small>Try .jpeg, .jpg or .png</small>
+            </div>
+          </div>
+          
+          <div class="copy__link__image">
+            <p id="imageLink">
+              https://mrsoni.me/UploadWizard-Extension
+            </p>
+            <button type="button" id="copyLink" class="button__hover">
+              copy link
+            </button>
+          </div>
+          
+          <div class="back_upload hidden">
+            <button type="button" id="button__back" class="button button__hover">
+              back
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="container__modal__uploading none">
+        <div class="modal__image__uploading">
+          <h3>Uploading...</h3>
+          <input type="range" name="" id="" />
+        </div>
+      </div>
+    </main>
+    
+    <div class="loader-popup" id="login_loader">
+      <span class="loader"></span>
+    </div>
+    
+    <div class="theme-switch">
+      <button id="darkModeBtn" class="theme-switch__btn theme-switch__btn--dark">
+        <svg class="theme-switch__icon" aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M20 15.31L23.16 12.63a.998.998 0 000-1.373l-1.72-2.535a1 1 0 00-.73-.32H4.992l-.867 1.212a1 1 0 00-.125.764l.8 2.056-.976 1.367a1 1 0 000 1.373l1.72 2.534a1 1 0 00.73.322H20zm-5-5a5 5 0 11-5 5 5 5 0 015-5zm0-10a9 9 0 100 18 9 9 0 000-18z"></path>
+        </svg>
+      </button>
+      <button id="lightModeBtn" class="theme-switch__btn theme-switch__btn--light">
+        <svg class="theme-switch__icon" aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M12 18a6 6 0 100-12 6 6 0 000 12zm0-2a4 4 0 110-8 4 4 0 010 8zm11-9h-4a1 1 0 00-1 1v4a1 1 0 002 0v-2h2a1 1 0 000-2zM3 13H1a1 1 0 00-1 1v4a1 1 0 001 1h4a1 1 0 001-1v-4a1 1 0 00-1-1zm16.364-6.352l-2.828-2.828a1 1 0 00-1.414 1.414l2.828 2.828a1 1 0 001.414-1.414zM6.343 17.657l-2.828 2.828a1 1 0 001.414 1.414l2.828-2.828a1 1 0 00-1.414-1.414z" ></path>
+        </svg>
+      </button>
+    </div>
+    
+    <div class="theme-switch" style="top: 55px;">
+      <button id="text-main-btn" class="theme-switch__btn theme-switch__btn--light" >
+        <svg class="theme-switch__icon" aria-hidden="true" viewBox="0 0 24 24">
+          <path d="M12 18a6 6 0 100-12 6 6 0 000 12zm0-2a4 4 0 110-8 4 4 0 010 8zm11-9h-4a1 1 0 00-1 1v4a1 1 0 002 0v-2h2a1 1 0 000-2zM3 13H1a1 1 0 00-1 1v4a1 1 0 001 1h4a1 1 0 001-1v-4a1 1 0 00-1-1zm16.364-6.352l-2.828-2.828a1 1 0 00-1.414 1.414l2.828 2.828a1 1 0 001.414-1.414zM6.343 17.657l-2.828 2.828a1 1 0 001.414 1.414l2.828-2.828a1 1 0 00-1.414-1.414z"></path>
+        </svg>
+      </button>
+    </div>
+      
+    <div class="none" id="text-area">
+      <div class="formbold-main-wrapper">
+        <div class="formbold-form-wrapper">
+          <div class="formbold-textarea formbold-form-label">
+            <label for="message">
+              <h3 style="margin-bottom: 40px; margin-bottom: 40px;">
+                Enter Your Code Here
+              </h3>
+            </label>
+            <textarea
+              rows="5"
+              name="note"
+              id="message"
+              placeholder="Enter Text....."
+              class="formbold-form-input p-10"
+            ></textarea>
+            <input type="hidden" name="username" value="prathmesh" />
+          </div>
+          <div style="display: ruby-text;">
+            <input type="text" name="type" id="id_type" placeholder=".txt" class="formbold-form-input" style="width: 50px; margin-right: 20px;">
+            <button class="formbold-btn" style="text-align: right;" id="submit_btn">
+                Upload
+            </button>
+        </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="./assets/scripts/globalVariables.js"></script>
+    <script src="./assets/scripts/Utils/Delay.js"></script>
+    <script src="./assets/scripts/Components/ImageUploader/Components/ChangeClassToShowOrHidden.js"></script>
+    <script src="./assets/scripts/Components/ImageUploader/Utils/validateMimesTypeImage.js"></script>
+    <script src="./assets/scripts/Components/ImageUploader/index.js"></script>
+    <script src="./assets/scripts/main.js"></script>
+    <script src="./assets/scripts/script.js"></script>
+  </body>
+
+</html>

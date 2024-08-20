@@ -1,0 +1,74 @@
+.drop__image {
+  --height: 218px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: var(--height);
+  background: #F6F8FB;
+  border-radius: 12px;
+  
+  position: relative;
+}
+
+.drop__image img {
+  width: 114px;
+  height: 88px;
+}
+
+.drop__image label {
+  margin-top: 37px;
+  color: #BDBDBD;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.drop__image div {
+  position: absolute;
+}
+
+.drop__image div:nth-child(1) {
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right ,#97BEF4 0%, #97BEF4 50%, transparent 55%);
+  /* espacamento das linhas - stroke das linhas */
+  background-size: 45px 1px;
+  background-repeat: repeat-x;
+  border-radius: 12px;
+}
+
+.drop__image div:nth-child(2) {
+  /* Esta width é o tamanho do altura do componente  */
+  width: var(--height);
+  height: 100%;
+  transform: rotate(90deg);
+  right: 0;
+  background-image: linear-gradient(to right ,#97BEF4 0%, #97BEF4 50%, transparent 55%);
+  background-size: 45px 1px;
+  background-repeat: repeat-x;
+  border-radius: 12px;
+}
+
+
+.drop__image div:nth-child(3) {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-180deg);
+  bottom: 0;
+  background-image: linear-gradient(to right ,#97BEF4 0%, #97BEF4 50%, transparent 55%);
+  background-size: 45px 1px;
+  background-repeat: repeat-x;
+  border-radius: 12px;
+}
+
+.drop__image div:nth-child(4) {
+  width: var(--height);
+  height: 100%;
+  transform: rotate(-90deg);
+  left: 0;
+  background-image: linear-gradient(to right ,#97BEF4 0%, #97BEF4 50%, transparent 55%);
+  background-size: 45px 1px;
+  background-repeat: repeat-x;
+  border-radius: 12px;
+}

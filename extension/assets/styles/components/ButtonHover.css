@@ -1,0 +1,12 @@
+.button__hover {
+  transition: all .25s ease-in;
+}
+
+.button__hover:hover {
+  cursor: pointer;
+  filter: brightness(1.1);
+}
+
+.button__hover:active {
+  filter: brightness(.9);
+}

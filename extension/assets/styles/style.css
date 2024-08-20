@@ -1,0 +1,160 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: #FAFAFB;
+  width: 450px;
+  min-height: 450px;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: -webkit-fill-available;
+  width: auto;
+}
+
+.container__image__uploader,
+.uploaded__image,
+.modal__image__uploading {
+  background-color: #FFF;
+  max-width: 401px;
+  max-height: 469px;
+  width: auto;
+  height: auto;
+  padding: 36px 30px;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+
+.container__image__uploader {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 35px 70px;
+}
+
+.drop__image {
+  padding: 0 45px;
+}
+
+.uploaded__image {
+  margin: 20px;
+  padding: 35px 60px;
+  position: relative;
+}
+
+.header__image__uploader {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header__image__uploader h1 {
+  color: #4F4F4F;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.header__image__uploader p {
+  color: #828282;
+  font-size: 12px;
+}
+
+form {
+  width: 100%;
+}
+
+.uploader__by__button, .input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.uploader__by__button {
+  margin-top: 18px;
+}
+
+.uploader__by__button span {
+  color: #BDBDBD;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+
+.input.hiddenLabel label {
+  width: 1px;
+  height: 1px;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.uploader__by__button input[type="file"] {
+  position: relative;
+  width: -webkit-fill-available;
+  height: 45px;
+}
+
+.uploader__by__button input[type="file"]::after {
+  content: 'Choose A File';
+  position: absolute;
+  top: 4px;
+  left: 70px;
+  background: #6A64F1;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all .25s ease-in;
+}
+
+.add__new {
+  position: absolute;
+  bottom: 40px;
+  right: 15px;
+  background: #2F80ED;
+  color: #fff;
+  padding: 9px 11px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all .25s ease-in;
+}
+
+.visibility__hidden {
+  visibility: hidden;
+}
+
+.visibility__visible {
+  visibility: visible;
+}
+
+.uploader__by__button input[type="file"]::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+
+.container__image__uploader.none {
+  display: none;
+}
+
+.none {
+  display: none;
+}

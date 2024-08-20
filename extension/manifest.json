@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Upload Wizard",
+    "version": "0.0.1",
+    "description": "Upload Wizard Extensions: Easily upload files and generate short URLs for quick access. Supports drag-and-drop uploads and text-to-file conversion.",
+    "permissions": ["tabs", "incognito", "activeTab"],
+    "browser_action": {
+        "default_icon": "assets/logo/icon16.png"
+    },
+    "action": {
+        "default_popup": "index.html",
+        "default_icon": {
+            "16": "assets/logo/icon16.png",
+            "48": "assets/logo/icon48.png",
+            "128": "assets/logo/icon128.png"
+        }
+    },
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    }
+}

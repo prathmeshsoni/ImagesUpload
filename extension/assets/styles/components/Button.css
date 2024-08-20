@@ -1,0 +1,11 @@
+.button {
+  background: #2F80ED;
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: capitalize;
+  border: none;
+  color: #FFF;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-left: 16px;
+}
