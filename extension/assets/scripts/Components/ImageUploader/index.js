@@ -76,7 +76,7 @@ function UploadMedia(file, check=null) {
     form.append('file', file);
   }
   
-  fetch('https://images.prathmeshsoni.works/images/', {
+  fetch('https://media.mrsoni.me/images/', {
     method: 'POST',
     headers: {
       'Authorization': 'token 90ce30269636eef63fd28078149c3fa93790f5d5'
@@ -148,7 +148,7 @@ function createPreviewImage(file, link=null) {
   }
   
   if (!isValidMimeType) {
-    imageUrl = 'https://images.prathmeshsoni.works/media/images/default-image.png'
+    imageUrl = 'https://media.mrsoni.me/media/images/default-image.png'
   }
   else {
     imageUrl = URL.createObjectURL(file)
